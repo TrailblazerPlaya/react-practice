@@ -1,9 +1,9 @@
 import "./App.css";
-import PersonsMap from "./components/PersonsMap";
+import Login from "./components/Login";
 function App() {
   return (
     <div className="App">
-      <PersonsMap />
+      <Login />
     </div>
   );
 }

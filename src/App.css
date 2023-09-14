@@ -2,22 +2,18 @@
   text-align: center;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+button {
+  margin: 10px;
+  background-color: goldenrod;
+  color: black;
 }
 
-.card {
-  width: 250px;
-  border: 1px blue solid;
-  border-radius: 10px;
-  margin: 15px;
-  padding-bottom: 10px;
+form {
+  font: 20px;
+  margin: 10px;
+  padding: 10px;
 }
 
-.card > img {
-  width: 100%;
-  border-radius: 10px;
+label {
+  display: block;
 }
