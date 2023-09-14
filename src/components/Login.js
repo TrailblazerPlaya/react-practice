@@ -1,23 +1,39 @@
+import { useState } from "react";
 export default function Login() {
+  const [data, setData] = useState({ username: "", password: "" });
   function handleFormSubmit(event) {
     event.preventDefault();
 
-    const userData = {
-      username: event.target.username.value,
-      password: event.target.password.value,
-    };
-    console.log(userData);
-    alert(JSON.stringify(userData));
+    console.log(data);
+    alert(JSON.stringify(data));
   }
+  function handleChange(e, name) {
+    setData({ ...data, [name]: e.target.value });
+  }
+
   return (
     <>
       <h1>Login form</h1>
       <form onSubmit={handleFormSubmit}>
         <label>
-          Username: <input type="text" name="username" />
+          Username:
+          <input
+            type="text"
+            value={data.username}
+            onChange={(e) => {
+              handleChange(e, "username");
+            }}
+          />
         </label>
         <label>
-          Password: <input type="password" name="password" />
+          Password:
+          <input
+            type="password"
+            value={data.password}
+            onChange={(e) => {
+              handleChange(e, "password");
+            }}
+          />
         </label>
         <button type="submit">Login</button>
       </form>
