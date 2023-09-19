@@ -1,0 +1,7 @@
+.todoButton {
+  font-size: 20px;
+  height: 40px;
+  width: 20%;
+  border-radius: 5px;
+  border: 2px solid black;
+}

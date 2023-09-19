@@ -1,0 +1,33 @@
+.todoInput {
+  font-size: 20px;
+  height: 40px;
+  width: 40%;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: cornflowerblue;
+}
+
+.todoInput:focus {
+  outline: none;
+}
+
+.todoInput::placeholder {
+  color: white;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.todoButton {
+  font-size: 20px;
+  height: 45px;
+  width: 20%;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
