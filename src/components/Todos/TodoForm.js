@@ -1,5 +1,7 @@
+import { RiCornerDownLeftLine } from "react-icons/ri";
 import style from "./TodoForm.module.css";
 import React, { useState } from "react";
+import Button from "../UserInterface/Button";
 export default function TodoForm({ onAddTodo }) {
   const [newTodo, setNewTodo] = useState("");
 
@@ -17,9 +19,9 @@ export default function TodoForm({ onAddTodo }) {
         type="text"
         onChange={(e) => setNewTodo(e.target.value)}
       />
-      <button className={style.todoButton} type="submit">
-        Submit
-      </button>
+      <Button className={style.todoButton} type="submit">
+        <RiCornerDownLeftLine />
+      </Button>
     </form>
   );
 }

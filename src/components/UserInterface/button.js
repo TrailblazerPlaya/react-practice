@@ -1,10 +1,9 @@
-import style from "./button.module.css";
-export default function Button() {
+import style from "./Button.module.css";
+export default function Button(props) {
+  const { children, disable = false } = props;
   return (
-    <>
-      <button className={style.todoButton} type="submit">
-        Submit
-      </button>
-    </>
+    <button {...props} disabled={disable} className={style.Button}>
+      {children}
+    </button>
   );
 }

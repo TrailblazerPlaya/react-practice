@@ -1,13 +1,20 @@
+import style from "./TodoList.module.css";
 import Todo from "./Todo";
-export default function TodoList({ todos, deleteTodo }) {
+
+export default function TodoList({ todos, deleteTodo, toggleTodo }) {
   {
     if (!todos.length) {
-      return <p className="center">No todos</p>;
+      return <p className={style.NoTodo}>No todos</p>;
     }
   }
-  return todos.map((todo, index) => {
+  return todos.map((todo) => {
     return (
-      <Todo key={index} todo={todo} index={index} deleteTodo={deleteTodo} />
+      <Todo
+        key={todo.id}
+        todo={todo}
+        deleteTodo={deleteTodo}
+        toggleTodo={toggleTodo}
+      />
     );
   });
 }
