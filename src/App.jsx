@@ -3,8 +3,10 @@ import About from "./components/About";
 import Contacts from "./components/Contacts";
 import NotFound from "./components/NotFound";
 import MainLayout from "./layouts/MainLayout";
-import "./App.css";
+import Courses from "./components/Courses";
+import SingleCourse from "./components/SingleCourse";
 import Home from "./components/Home";
+import "./App.css";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +16,8 @@ function App() {
             <Route index={true} element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
+            <Route path="courses" element={<Courses />} />
+            <Route path="courses/:courseSlug" element={<SingleCourse />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
