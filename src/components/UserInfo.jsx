@@ -1,7 +1,7 @@
 import UserContext from "../context/UserContext";
+import { useContext } from "react";
 function UserInfo() {
-  return (
-    <UserContext.Consumer>{(user) => <div>{user}</div>}</UserContext.Consumer>
-  );
+  const { user } = useContext(UserContext);
+  return <h1>{user}</h1>;
 }
 export default UserInfo;
